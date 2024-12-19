@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # get '/blog_posts/:id/edit', to: 'blog_posts#edit', as: :edit_blog_post
   # post '/blog_posts', to: 'blog_posts#create', as: :blog_posts
 
-  resources :blog_posts
+  resources :blog_posts do
+    resource :cover_image, only: [:destroy], module: :blog_posts
+  end
   root 'blog_posts#index'
 end

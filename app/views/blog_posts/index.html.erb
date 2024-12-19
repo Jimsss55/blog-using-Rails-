@@ -2,6 +2,7 @@
 
 <%@blog_posts.each do |index|%>
   <div>
+    <%=image_tag index.cover_image if index.cover_image.present? %>
     <h3><%=link_to index.title, index%></h3>
     <p><%=index.content %></p>
   </div>
