@@ -1,0 +1,10 @@
+<h1>Hello from my Block</h1>
+
+<%@blog_posts.each do |index|%>
+  <div>
+    <h3><%=link_to index.title, index%></h3>
+    <p><%=index.content %></p>
+  </div>
+<% end %>
+
+<%== pagy_nav(@pagy) %>
